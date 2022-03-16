@@ -143,7 +143,7 @@ void timeExperiment() {
     const unsigned CASES_N = ARRAY_SIZE(generatingFuncs);
 
     // запись статистики в файл
-    for (size_t size = 10000; size <= 100000; size += 10000) {
+    for (size_t size = 200000; size <= 200000; size += 10000) {
         printf(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
         printf("Size : %d\n", size);
         for (int i = 0; i < FUNCS_N; i++) {
@@ -164,11 +164,15 @@ void timeExperiment() {
 void NCompsExperiment() {
     // описание функций сортировки
     SortFuncNComps sorts[] = {
-            {getBubbleSortNComps,    " getBubbleSortNComps "},
-            {getSelectionSortNComps, " getSelectionSortNComps "},
-            {getInsertionSortNComps, " getInsertionSortNComps "},
-            {getShellSortNComps,     " getShellSortNComps "},
-            {getRadixSortNComps,     " getRadixSortNComps "}
+//            {getBubbleSortNComps,    "getBubbleSortNComps"},
+            {getSelectionSortNComps, "getSelectionSortNComps"},
+//            {getInsertionSortNComps, "getInsertionSortNComps"},
+//            {getCombSortNComps, "getCombSortNComps"},
+//            {getShellSortNComps,     "getShellSortNComps"},
+//            {getRadixSortNComps,     "getRadixSortNComps"},
+//            {getHeapSortNComps,     "getHeapSortNComps"},
+//            {getMergeSortNComps,     "getMergeSortNComps"},
+//            {getQsortNComps,     "getQsortNComps"}
     };
 
     const unsigned FUNCS_N = ARRAY_SIZE(sorts);
@@ -182,8 +186,7 @@ void NCompsExperiment() {
             // генерируется массив n - 1, n - 2, ..., 0
             {generateOrderedBackwards, " orderedBackwards "}
     };
-    const unsigned CASES_N = ARRAY_SIZE
-                             (generatingFuncs);
+    const unsigned CASES_N = ARRAY_SIZE(generatingFuncs);
 
 // запись статистики в файл
     for (size_t size = 10000; size <= 100000; size += 10000) {
@@ -208,7 +211,7 @@ void NCompsExperiment() {
 
 int main() {
     srand(time(0));
-    timeExperiment();
+    NCompsExperiment();
 //    int a[100000];
 //    size_t n = 100000;
 

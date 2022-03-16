@@ -41,11 +41,31 @@ void shellSort(int *a, size_t size);
 // цифровая сортировка массива a размера n
 void radixSort(int *a, size_t n);
 
+// пиромидальная сортировка массива a размера n
 void heapSort(int *a, size_t n);
 
+// сортировка слиянием массива a размера n
 void mergeSort(int *a, size_t n);
 
+// быстрая сортировка массива a размера n
 void qsort_(int *array, size_t n);
 
-getBubbleSortNComps
+long long getBubbleSortNComps(int *a, const size_t n);
+
+long long getSelectionSortNComps(int *a, const size_t n);
+
+long long getInsertionSortNComps(int *a, const size_t size);
+
+long long getCombSortNComps(int *a, const size_t n);
+
+long long getShellSortNComps(int *a, const size_t size);
+
+long long getRadixSortNComps(int *a, const size_t n);
+
+long long getHeapSortNComps(int *a, const size_t n);
+
+long long getMergeSortNComps(int *a, const size_t n);
+
+long long getQsortNComps(int *array, const size_t n);
+
 #endif //INC_5C_SORTING_H
