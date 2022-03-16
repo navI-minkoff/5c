@@ -46,7 +46,7 @@ void checkTime(void (*sortFunc )(int *, size_t),
                size_t size, char *experimentName) {
     static size_t runCounter = 1;
 // генерация последовательности
-    static int innerBuffer[100000];
+    static int innerBuffer[200000];
     generateFunc(innerBuffer, size);
     printf("Run #%zu| ", runCounter++);
     printf("Name: %s\n", experimentName);
@@ -87,7 +87,7 @@ void checkNComps(unsigned long long (*sortFunc )(int *, size_t),
                  size_t size, char *experimentName) {
     static size_t runCounter = 1;
 // генерация последовательности
-    static int innerBuffer[100000];
+    static int innerBuffer[200000];
     generateFunc(innerBuffer, size);
     printf("Run #%zu| ", runCounter++);
     printf(" Name : %s\n", experimentName);
@@ -122,15 +122,15 @@ void checkNComps(unsigned long long (*sortFunc )(int *, size_t),
 
 void timeExperiment() {
     SortFunc sorts[] = {
-            {selectionSort, "selectionSort"},
+//            {selectionSort, "selectionSort"},
             {insertionSort, "insertionSort"},
-            {bubbleSort,    "bubbleSort"},
-            {combSort,      "combSort"},
-            {shellSort, "shellSort"},
-            {radixSort, "radixSort"},
-            {mergeSort, "mergeSort"},
-            {heapSort, "heapSort"},
-            {qsort_, "qsort"},
+//            {bubbleSort,    "bubbleSort"},
+//            {combSort,      "combSort"},
+//            {shellSort, "shellSort"},
+//            {radixSort, "radixSort"},
+//            {mergeSort, "mergeSort"},
+//            {heapSort, "heapSort"},
+//            {qsort_, "qsort"},
     };
     const unsigned FUNCS_N = ARRAY_SIZE(sorts);
 
@@ -211,7 +211,7 @@ void NCompsExperiment() {
 
 int main() {
     srand(time(0));
-    NCompsExperiment();
+    timeExperiment();
 //    int a[100000];
 //    size_t n = 100000;
 

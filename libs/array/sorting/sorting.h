@@ -68,4 +68,4 @@ long long getMergeSortNComps(int *a, const size_t n);
 
 long long getQsortNComps(int *array, const size_t n);
 
-#endif //INC_5C_SORTING_H
+#endif
